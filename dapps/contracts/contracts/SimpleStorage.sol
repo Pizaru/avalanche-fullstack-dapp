@@ -8,7 +8,7 @@ contract SimpleStorage {
     // Event saat owner ditetapkan/deploy
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
 
-    // ketika ada update saya akan track perubahann
+    // ketika ada update saya akan track perubahannya
     event ValueUpdated(uint256 newValue);
 
     constructor() {
