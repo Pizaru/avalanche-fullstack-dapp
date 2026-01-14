@@ -8,7 +8,7 @@ contract SimpleStorage {
     // Event saat owner ditetapkan/deploy
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
 
-    //track perubahannya
+    // ketika ada update saya akan track perubahann
     event ValueUpdated(uint256 newValue);
 
     constructor() {
@@ -21,13 +21,13 @@ contract SimpleStorage {
         _;
     }
 
-    // write
+    // simpan nilai ke blockchain (write)
     function setValue(uint256 _value) public onlyOwner {
         storedValue = _value;
         emit ValueUpdated(_value);
     }
 
-    // read
+    // membaca nilai dari blockchain (read) terakhir kali di update
     function getValue() public view returns (uint256) {
         return storedValue;
     }
